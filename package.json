@@ -1,7 +1,7 @@
 {
   "name": "novus",
   "productName": "Novus",
-  "description": "Desktop app for mesh networking",
+  "description": "Desktop app for mesh networking.",
   "version": "0.0.0",
   "private": true,
   "author": "Con",
