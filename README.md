@@ -1,5 +1,5 @@
 # Novus
-Temporary desktop app for mesh networking project
+Temporary repo for desktop app for mesh networking project
 
 To start, clone into this repo and then run:
 `npm install`
