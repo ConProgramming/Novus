@@ -5,6 +5,39 @@ let fs = require('fs');
 let path = require('path');
 let mkdirp = require('mkdirp');
 
+const sampleMessageData = { 
+  "1" : {
+    "receiver" : "John Doe"
+  },
+  "2" : {
+    "receiver" : "Jimmy Kimmel"
+  }
+}
+
+/** storage.isPathExists(app.getPath('userData') + '/messages.json')
+.then(itDoes => {
+  if (itDoes) {
+    console.log('pathDoesExists !')
+    storage.get(app.getPath('userData') + '/messages.json')
+    .then(data => {
+      console.log(data);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+  }else{
+    console.log('doesnt exist')
+    storage.set(app.getPath('userData') + '/messages.json', sampleMessageData)
+    .then(() => {
+      console.log('The file was successfully written to the storage');
+    })
+    .catch(err => {
+      console.error(err);
+    });
+  }
+  
+}); **/
+
 mkdirp.sync(path.join(__dirname, '../pages'));
 
 let input = path.join(__dirname, '../pages-content');
@@ -29,7 +62,7 @@ function buildPages(files) {
 
     // Render template
     let render = template({
-      title: 'myApp',
+      title: 'Novus',
     });
     fs.writeFileSync(path.join(output, file), render);
   });
