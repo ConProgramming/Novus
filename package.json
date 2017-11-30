@@ -1,13 +1,14 @@
 {
-  "name": "my-app",
+  "name": "Novus",
   "version": "0.1.0",
   "main": "main.js",
   "scripts": {
     "start": "node ./helpers/page-build-helper.js && electron .",
-    "build": "node ./helpers/page-build-helper.js",
+    "build": "node ./helpers/page-build-helper.js && electron-packager .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "electron-packager": "^10.1.0",
     "electron-prebuilt": "^0.36.0",
     "handlebars": "^4.0.5",
     "handlebars-layouts": "^3.1.3",
