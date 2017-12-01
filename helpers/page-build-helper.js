@@ -40,6 +40,8 @@ const sampleMessageData = {
 
 mkdirp.sync(path.join(__dirname, '../pages'));
 
+let input = path.join(__dirname, '../pages-content');
+let pageFiles = fs.readdirSync(input);
 let output = path.join(__dirname, '../pages');
 
 let layoutPath = path.join(__dirname, '../layouts/layout.hbs');
@@ -66,3 +68,4 @@ function buildPages(files) {
   });
 }
 
+buildPages(pageFiles);
